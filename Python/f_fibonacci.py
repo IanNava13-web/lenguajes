@@ -10,4 +10,4 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 
 # Ejemplo
-print(fibonacci(10))  # Resultado: 8
+print(fibonacci(10))
