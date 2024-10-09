@@ -1,8 +1,16 @@
-# Definimos dos arreglos
-arreglo1 = [1, 2, 3]
-arreglo2 = [4, 5, 6]
+def contar_vocales(texto):
+    # Definimos las vocales
+    vocales = "aeiouAEIOU"
+    contador = 0
+    
+    # Iteramos sobre cada carácter en el texto
+    for letra in texto:
+        if letra in vocales:
+            contador += 1
+    
+    return contador
 
-# Sumar los arreglos con comprensión de listas
-suma_arreglos = [arreglo1[i] + arreglo2[i] for i in range(len(arreglo1))]
-
-print(suma_arreglos)  # Salida: [5, 7, 9]
+# Ejemplo de uso
+texto = "Hola, ¿cómo estás?"
+resultado = contar_vocales(texto)
+print(f"Número de vocales en el texto: {resultado}")
