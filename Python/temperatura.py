@@ -3,4 +3,4 @@ def fahrenheit(num):
 
 c = float(input("Ingrese grado celsius: "))
 
-print("Los grados fahrenheit es: ",fahrenheit(c))
+print("Los grados fahrenheit es: ",fahrenheit(c), "°F")
