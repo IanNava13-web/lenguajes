@@ -190,3 +190,64 @@ console.log(webTechs); // ["CSS", "HTML", "JavaScript", "MongoDB", "Node", "Reac
 
 webTechs.reverse(); 
 console.log(webTechs); // ["Redux", "React", "Node", "MongoDB", "JavaScript", "HTML", "CSS"]
+
+let listaNumeros = [1,3,4,2,3,1,6,8,6,3]
+
+console.log(listaNumeros.sort())
+console.log(listaNumeros)
+console.log(listaNumeros.reverse())
+console.log(listaNumeros)
+
+listaNumeros.sort()
+listaNumeros.splice(3,3)
+
+console.log("-------------------------------")
+let empresas = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
+
+let listaEmpresas = empresas.split(", ")
+console.log(listaEmpresas)
+
+let buscarEmpresa = prompt("Nombre de la empresa a buscar")
+console.log(buscarEmpresa)
+
+let nombre = "" //Esto en booleano es un false
+
+for (var i = listaEmpresas.length - 1; i >= 0; i--) {
+  if(listaEmpresas[i].toLowerCase() === buscarEmpresa.toLowerCase()){
+    nombre = listaEmpresas[i]
+    break 
+  } 
+}
+
+(!nombre)? console.log("La empresa no existe") : console.log(`La empresa existe: ${nombre}`)
+
+/*
+  EL METODO DE FILTER() USA UNA FUNCION PARA BUSCAR UN ELEMENTO DE UN ARRAY, DEVOLVIENDO UN ARREGLO
+  CON LOS ELEMENTOS A BUSCAR
+*/
+
+//Los corchetes en una expresion regular indican la cantidad de veces que se necesita de ese caracter(es)
+//Usando una funcion flecha
+let valor1 = listaEmpresas.filter( elemento => elemento.match(/o.*o/gi) ) //USANDO FILTER()
+console.log(valor1)
+
+let valor2 = listaEmpresas.find( (elemento) => elemento.match(/o.*o/gi) )
+console.log(valor2)
+
+/*
+el punto indica cualquier caracter que se quiere buscar
+el asterisco es un multiplicador, de uno o mas caracteres
+ADEMAS TENER EN CUENTA QUE LOS ELEM
+*/
+
+let arraylove = ["I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", "JS", "React", "Python"]
+
+console.log( "El texto es: "+arraylove.join(" ") )
+
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
+
+const fullStack = frontEnd.concat(backEnd)
+
+console.log(fullStack);
+console.log(fullStack.sort()); //METODO PARA ORGANIZAR
