@@ -161,3 +161,32 @@ console.log(fruit);
 fruit.pop()
 fruit.pop()
 console.log(fruit)
+
+//Eliminado con shift desde el inicio y unshift como push agregando pero desde el principio
+fruit.unshift("zanahoria")
+console.log(fruit); 
+
+fruit.unshift("piña")
+console.log(fruit);
+
+fruit.shift()
+fruit.shift()
+console.log(fruit)
+
+//ORGANIZAR TEXTO E INVERTIRLO, CON SORT Y REVERSE
+console.log("-------------------------------"); 
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
+];
+
+webTechs.sort();
+console.log(webTechs); // ["CSS", "HTML", "JavaScript", "MongoDB", "Node", "React", "Redux"]
+
+webTechs.reverse(); 
+console.log(webTechs); // ["Redux", "React", "Node", "MongoDB", "JavaScript", "HTML", "CSS"]
