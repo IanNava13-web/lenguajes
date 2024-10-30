@@ -212,6 +212,7 @@ console.log(buscarEmpresa)
 
 let nombre = "" //Esto en booleano es un false
 
+//Buscando sin usar filter ni nada perro
 for (var i = listaEmpresas.length - 1; i >= 0; i--) {
   if(listaEmpresas[i].toLowerCase() === buscarEmpresa.toLowerCase()){
     nombre = listaEmpresas[i]
@@ -220,6 +221,8 @@ for (var i = listaEmpresas.length - 1; i >= 0; i--) {
 }
 
 (!nombre)? console.log("La empresa no existe") : console.log(`La empresa existe: ${nombre}`)
+
+console.log( listaEmpresas.filter( elemento => elemento.match(buscarEmpresa) ) )
 
 /*
   EL METODO DE FILTER() USA UNA FUNCION PARA BUSCAR UN ELEMENTO DE UN ARRAY, DEVOLVIENDO UN ARREGLO
