@@ -254,3 +254,30 @@ const fullStack = frontEnd.concat(backEnd)
 
 console.log(fullStack);
 console.log(fullStack.sort()); //METODO PARA ORGANIZAR
+
+//Organizando un arreglo sin usar sort y encontrando el mayor y el menor
+
+console.log("Organizando")
+
+let listaF = [22,3,1,56,103,43,1,23,67,76,79,3,45,33,56,43,5,66,101,110,100]
+let mayor = 0
+let menor = listaF[0]
+
+for ( let m of listaF ) {
+  if ( mayor < m ) {
+    mayor = m
+  }
+  if ( m < menor ){
+    menor = m
+  }
+}
+
+let listaMenorAMayor = listaF.sort( (a,b) => b - a )
+let listaMayorAMenor = listaMenorAMayor.reverse()
+
+console.log( "Numero mayor: ", mayor)
+console.log( "Numero menor: ", menor)
+console.log( listaMenorAMayor )
+console.log( listaMayorAMenor )
+console.log( listaF )
+console.log( listaF.sort() )
