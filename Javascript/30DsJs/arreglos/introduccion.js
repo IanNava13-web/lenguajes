@@ -289,3 +289,10 @@ console.log( listaF.sort() )
 //ya que existen diferentes tipos de metodos llamados mutables, esto es debido a optimizacion de memoria
 //Otros metodos como push,pop hacen lo mismo, modifican el arreglo original
 //Es necesario usar el operador de propagacion ... o partirlo con slice
+//Es decir, tener encuenta los metodos que modifican el arreglo original
+
+//operador de propagacion
+let conteo = [1,2,3,4,5] //Todo es un objeto, un arreglo es un objeto
+console.log(conteo)
+console.log(...conteo)
+console.log(typeof conteo)
