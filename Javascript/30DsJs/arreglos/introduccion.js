@@ -272,12 +272,20 @@ for ( let m of listaF ) {
   }
 }
 
-let listaMenorAMayor = listaF.sort( (a,b) => b - a )
-let listaMayorAMenor = listaMenorAMayor.reverse()
-
-console.log( "Numero mayor: ", mayor)
 console.log( "Numero menor: ", menor)
-console.log( listaMenorAMayor )
+console.log( "Numero mayor: ", mayor)
+
+let listaMayorAMenor = listaF.sort( (a,b) => b - a ) 
 console.log( listaMayorAMenor )
+
+//Se invierte el arreglo y queda almacenado, despues lo guardo en la variable
+let listaMenorAMayor = listaMayorAMenor.reverse() 
+console.log( listaMenorAMayor )
+
 console.log( listaF )
 console.log( listaF.sort() )
+
+//Al usar sort y reverse, estoy modificando el arreglo principal listaF indirectamente
+//ya que existen diferentes tipos de metodos llamados mutables, esto es debido a optimizacion de memoria
+//Otros metodos como push,pop hacen lo mismo, modifican el arreglo original
+//Es necesario usar el operador de propagacion ... o partirlo con slice
