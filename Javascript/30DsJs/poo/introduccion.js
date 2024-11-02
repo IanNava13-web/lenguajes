@@ -100,8 +100,60 @@ console.log( person["isMarried"] ) // Importante las comillas
 // console.log( person[isMarried])
 console.log( person["skills"][2] ) // Importante las comillas
 
-/* Creando un metodo de objeto */
+/*
+Creando un metodo de objeto
+Funciones dentro de un objeto
+*/
 
+let carro = {
+  color: "rojo",
+  valor: 10000000,
+  puertas: 4,
+  ventanas: ["cuadrada", "circular"],
+  getCaracteristicas: function () {
+    return `${this.color} - ${this.valor} - ${this.puertas}`
+  }
+}
+  // this es una palabra reservada
 
+console.log( carro.color )
+console.log( carro["color"] )
+console.log( carro.getCaracteristicas() )
+console.log( carro["getCaracteristicas"]() )
 
+//Como un objeto es una estructura de datos mutable, se le podran agregar valores
 
+carro.valor = 50000000
+carro.pais = "Colombia"
+carro.marca = "audi"
+carro.puertas = 2
+carro.ventanas.push("negras","polarizadas")
+
+carro.getCaracteristicas = function () {
+  let descripcion = `este carro tipo ${this.marca} tiene ${this.puertas} y es de ${this.pais}`
+  return descripcion
+}
+
+console.log( carro.valor )
+console.log( carro.pais )
+console.log( carro.marca )
+console.log( carro.puertas )
+console.log( carro.ventanas )
+console.log( carro.getCaracteristicas() )
+console.log( carro["getCaracteristicas"]() )
+
+/*
+Manipulación de objetos
+*/
+
+console.log("-------------------------")
+
+let casa = {
+  propietarios: "Brahian Narvaez",
+  direccion: "Erique segoviano",
+  habitaciones: 7,
+  habitantes: 3,
+  dormitorios: ["habitacion1","habitacion2","habitacion3"]
+}
+
+console.log(casa)
