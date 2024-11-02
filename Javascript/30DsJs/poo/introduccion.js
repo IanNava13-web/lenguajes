@@ -144,6 +144,7 @@ console.log( carro["getCaracteristicas"]() )
 
 /*
 Manipulación de objetos
+Para la manipulacion de objetos se utiliza la palabra reservada Object
 */
 
 console.log("-------------------------")
@@ -153,7 +154,33 @@ let casa = {
   direccion: "Erique segoviano",
   habitaciones: 7,
   habitantes: 3,
-  dormitorios: ["habitacion1","habitacion2","habitacion3"]
+  dormitorios: ["habitacion1","habitacion2","habitacion3"],
+  getDescription: function () {
+    return "nombre: "+this.propietarios+" direccion: "+this.direccion+" habitaciones: "+this.habitaciones
+  }
 }
 
 console.log(casa)
+
+let copiacasa1 = Object.assign({},casa) // Para copiar las caracteristicas de un objeto con assign
+let copiacasa2 = {}
+Object.assign(copiacasa2,casa) // destino, origen
+
+console.log(copiacasa1)
+console.log(copiacasa2)
+
+let claves = Object.keys( copiacasa2 ) //Keys convierte las claves de valor en un arreglo
+let clavesDormitorio = Object.keys( copiacasa2.dormitorios )
+console.log( claves )
+console.log( clavesDormitorio ) //[claves del arreglo]
+
+let valores = Object.values( copiacasa2 ) //Values convierte los valores de un objeto en un arreglo
+let valoresDormitorio = Object.values( copiacasa2.dormitorios )
+console.log( valores )
+console.log( valoresDormitorio )
+
+let entradas = Object.entries( copiacasa2 ) // Entries obtiene la clave y el valor del objs convirtiendolo todo en un array
+console.log( entradas )
+
+console.log( casa.hasOwnProperty( "dormitorios" ) ) //Para confirmar que esa clave existe en el obj: true o false
+console.log( casa.hasOwnProperty( "color" ) )
