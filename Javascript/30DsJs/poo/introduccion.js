@@ -151,7 +151,7 @@ console.log("-------------------------")
 
 let casa = {
   propietarios: "Brahian Narvaez",
-  direccion: "Erique segoviano",
+  direccion: "Enrique segoviano",
   habitaciones: 7,
   habitantes: 3,
   dormitorios: ["habitacion1","habitacion2","habitacion3"],
@@ -184,3 +184,6 @@ console.log( entradas )
 
 console.log( casa.hasOwnProperty( "dormitorios" ) ) //Para confirmar que esa clave existe en el obj: true o false
 console.log( casa.hasOwnProperty( "color" ) )
+
+//PARA BORRAR UN ATRIBUTO DE UN OBJETO, SE USA LA PALABRA RESERVADA DELETE
+// delete casa.atributo
