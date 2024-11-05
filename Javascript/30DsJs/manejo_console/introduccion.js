@@ -139,7 +139,7 @@ console.log(user);
 console.log(users);
 console.groupEnd();
 
-//count: llama la funcion n veces
+//count: imprime el numero de veces que se llama la funcion
 const func = () => {
   console.count("Function has been called");
 };
@@ -147,7 +147,7 @@ func();
 func();
 func();
 
-
+//time: permite medir el tiempo que corre un valor
 console.time("Regular for loop");
 for (let i = 0; i < countries.length; i++) {
   console.log(countries[i][0], countries[i][1]);
