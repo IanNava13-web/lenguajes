@@ -193,7 +193,9 @@ autobus1.setColor = "Amarillo"
 console.log(autobus1.getColor)
 console.log(autobus1.getMessage())
 
-/*Para trabajar con los metodos de la clase padre en la clase hija, es decir personalizarlos en la clase hija
+/*
+Para trabajar con los metodos de la clase padre en la clase hija, es decir personalizarlos en la clase hija
+Se puede utilizar la palabra reservada super que tiene como parametros los parametros del constructor
 */
 
 class Animal {
