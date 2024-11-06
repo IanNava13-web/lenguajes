@@ -47,7 +47,7 @@ try {
 
 
 /*
-Throw: Permite crear errores, lanzar excepciones
+Throw: Permite crear errores, lanzar excepciones, inducir el error
 
 throw "Error2"; // genera una excepción con un valor de cadena
 throw 42; // genera una excepción con el valor 42
