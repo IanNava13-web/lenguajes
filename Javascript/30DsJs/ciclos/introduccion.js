@@ -119,3 +119,17 @@ for ( let m = 1 ; m <= 100 ; m++ ){
 console.log("La suma de numeros pares es: ", sum_pares)
 console.log(`La suma de numeros impares es: ${sum_impares}`)
 console.log(`La suma de numeros es: ${sum_pares+sum_impares}`)
+
+
+//for ... in solo para objetos
+const user = { name: "Alice", age: 25, role: "Developer" };
+for (let key in user) {
+  console.log(key, user[key]); // Muestra cada clave y su valor
+}
+
+//for ... of solo para arreglos, strings, set y map
+const text = "JavaScript";
+for (let char of text) {
+  console.log(char); // Muestra cada carácter de la cadena
+}
+
