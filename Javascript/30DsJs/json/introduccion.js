@@ -57,7 +57,7 @@ const objjs1 = JSON.parse( json1, (key, value) => {
 console.log(json1)
 console.log(objjs1)
 
-console.log(typeof json1)
+console.log(typeof json1) //JSON es de tipo string
 console.log(typeof objjs1)
 
 /*
