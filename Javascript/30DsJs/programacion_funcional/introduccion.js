@@ -1,6 +1,6 @@
 console.log("Funciones")
 
-console.log("Una funcion es un bloque de codigo reutilizable, generalmente con un nombre y un parentesis para realizar una determinada tarea")
+//Una funcion es un bloque de codigo reutilizable, generalmente con un nombre y un parentesis para realizar una determinada tarea
 
 /*
 
@@ -125,15 +125,20 @@ console.log(`El valor de 2 es: ${valorAretornar(2)}`)
 //FUNCIONES AUTOINVOCADAS O AUTOREFERENCIAS
 //Funciones anonimas que no necesitan ser llamadas para retornar un valor, se define y se invoca inmediatamente
 
+console.log = Function.prototype.bind.call(console.log, console);
+(function (nombre) {
+  console.log("Hola, " + nombre);
+})("Mundo");
+
+(function (n) {
+  console.log(n * n);
+})(2);
+
 let cuadrado = (function (n) {
   return n*2
 })(5)
 
 console.log(cuadrado) // O tambien console.log(cuadrado(5))
-
-// (function (n) {
-//   console.log(n * n);
-// })(2);
 
 //FUNCIONES FLECHA
 /*
