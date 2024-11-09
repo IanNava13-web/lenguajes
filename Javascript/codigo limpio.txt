@@ -1,0 +1,119 @@
+Importante tener una guia de programacion de js a seguir
+
+Guía de estilo JavaScript de Airbnb
+Guía de estilo estándar de JavaScript
+Guía de estilo JavaScript de Google
+
+https://github.com/airbnb/javascript
+https://standardjs.com/
+https://google.github.io/styleguide/jsguide.html
+
+// función que devuelve el nombre completo de una persona
+const printFullName = (firstName, lastName) => firstName + " " + lastName;
+
+// función que calcula el cuadrado de un número
+const square = (n) => n * n;
+
+// una función que genera colores hexa al azar
+const hexaColor = () => {
+  const str = "0123456789abcdef";
+  let hexa = "#";
+  let index;
+  for (let i = 0; i < 6; i++) {
+    index = Math.floor(Math.random() * str.length);
+    hexa += str[index];
+  }
+  return hexa;
+};
+
+// una función que muestra la fecha y la hora
+const showDateTime = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const date = now.getDate();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  const dateMonthYear = date + "." + month + "." + year;
+  const time = hours + ":" + minutes;
+  const fullTime = dateMonthYear + " " + time;
+  return fullTime;
+};
+
+
+for (let i = 0; i < n; i++) {
+  console.log();
+}
+
+// declaración de una variable array
+const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+
+// iteración de un array mediante un bucle for regular
+let len = names.length;
+for (let i = 0; i < len; i++) {
+  console.log(names[i].toUpperCase());
+}
+
+// iteración de un array mediante for of
+for (const name of names) {
+  console.log(name.toUpperCase());
+}
+
+// iteración de un array mediante forEach
+names.forEach((name) => name.toUpperCase());
+
+const person = {
+  firstName: "Asabeneh",
+  lastName: "Yetayeh",
+  age: 250,
+  country: "Finland",
+  city: "Helsinki",
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Node",
+    "MongoDB",
+    "Python",
+    "D3.js",
+  ],
+  isMarried: true,
+};
+for (const key in person) {
+  console.log(key);
+}
+
+// declarando el objeto literal
+const person = {
+  firstName: "Asabeneh",
+  lastName: "Yetayeh",
+  age: 250,
+  country: "Finland",
+  city: "Helsinki",
+  skills: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node",
+    "MongoDB",
+    "Python",
+    "D3.js",
+  ],
+  isMarried: true,
+};
+// iterar a través de las claves del objeto
+for (const key in person) {
+  console.log(key, person[key]);
+}
+
+
