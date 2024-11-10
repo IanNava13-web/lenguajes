@@ -176,7 +176,7 @@ const printFullName = (firstName, lastName) => {
   return `${firstName} ${lastName}`;
 };
 
-console.log(printFullName("Ian", "Navaa"));
+console.log(printFullName("Jonh", "Cena"));
 
 //FUNCIONES CON PARAMETRO POR DEFECTO
 //A veces es necesario tener parametros designados dentro de las funciones

@@ -4,7 +4,7 @@ for (var i = 0 ; i <= 9; i++) {
   console.log("Numero: ",i)
 }
 
-const paises = ["Colombia", "Brasil", "Mexico", "España", "Argentina"]
+const paises = ["Brasil", "Mexico", "España", "Argentina"]
 
 for (var i = paises.length - 1; i >= 0; i--) {
   console.log(paises[i].toUpperCase())

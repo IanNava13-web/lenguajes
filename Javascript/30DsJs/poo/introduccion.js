@@ -150,7 +150,7 @@ Para la manipulacion de objetos se utiliza la palabra reservada Object
 console.log("-------------------------")
 
 let casa = {
-  propietarios: "Brahian Narvaez",
+  propietarios: "Skipper Cabo",
   direccion: "Enrique segoviano",
   habitaciones: 7,
   habitantes: 3,

@@ -15,7 +15,7 @@ arreglo3 = [
   1345,
   1.21,
   {
-    paises: ["Colombia","Mexico","Brasil"],
+    paises: ["Ecuador","Mexico","Brasil"],
     frutas: ["Manzana","Mango"],
     objetos: {
       mesa : 1,
