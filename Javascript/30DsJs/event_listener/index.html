@@ -12,7 +12,24 @@
     </style>
   </head>
 
-  <body>
+  <body onload="carga()">
+
+    <h1>Key events: Presiona una tecla y obtendras codigo</h1>
+
+    <button> Has click aqui </button>
+    <button onclick="clickMe()"> Mensaje de alerta </button>
+    <button id="dobleClick"> Para el doble click </button>
+    <button onmouseenter="mouse()">Mouse enter</button>
+
+    <h1>Indice de masa corporal</h1>
+
+    <input type="text" name="masa" id="masa" placeholder="Ingrese masa">
+    <input type="text" name="altura" id="altura" placeholder="Ingrese altura">
+    <button id="btnid">Calcular indice</button>
+
+    <input type="text" id="mass" placeholder="say something" />
+    <p></p>
+
     <script src="introduccion.js"></script>
   </body>
 </html>
