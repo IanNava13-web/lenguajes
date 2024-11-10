@@ -13,6 +13,8 @@ Para acceder un elemento html se necesita nombre etiqueta, id, nombre de la case
 Obteniendo elementos por nombre de etiquetas html (tag)
 getElementsByTagName():toma un nombre de etiqueta como parámetro de cadena y este método devuelve un objeto HTMLCollection.
 */
+console.log(document)
+console.log(typeof document)
 
 const allTitles = document.getElementsByTagName("h1");
 console.log(allTitles); //HTMLCollections
@@ -65,11 +67,115 @@ const allTitles4 = document.querySelectorAll('.title') // lo mismo ocurre con la
 
 /*
 AÑADIENDO ATRIBUTOS
+Si se quiere añadir ciertas caracteristicas a las etiquetas
 */
 
-const titles = document.querySelectorAll("h1");
-titles[3].className = "title";
+const titles = document.querySelectorAll("h1"); //Esto es un array de obj
+titles[3].className = "title"; //Agregando como clave - valor, aunque es mejor declararlo en el html
 titles[3].id = "fourth-title";
 
 console.log(titles)
 console.log(titles[3])
+
+console.log(typeof titles)
+console.log(typeof titles[3])
+
+titles[3].setAttribute("class", "title"); //Agregando utilizando setAttribute que recibe nombre del atributo y valor
+titles[3].setAttribute("id", "fourth-title");
+
+//classList permite agregar clases adicionales sin necesidad de eliminar las existentes
+titles[3].classList.add("title", "header-title");
+console.log(titles[3])
+console.log(titles[3].classList)
+console.log(typeof titles[3].classList)
+
+//Eliminacion de datos de la clase mediante remover
+titles[3].classList.remove("title", "header-title"); //n numero de clases a eliminar
+console.log(titles[3])
+
+
+//Añadiendo textos a una etiqueta html
+//con textContent
+titles[3].textContent = "Cuarto titulo";
+console.log(titles[3])
+
+//con innerHTML
+//NO solo agrega texto sino tambien elementos HTML como hijos
+
+const lists = `<li>Lista 1</li>
+            <li>Lista 2</li>
+            <li>Lista 3</li>
+            <li>Lista 4</li>
+            <li>Lista 5</li>
+            <li>Lista 6</li>
+            <li>Lista 7</li>
+            <li>Lista 8</li>
+            <li>Lista 9</li>
+            <li>Lista 10</li>`
+
+const ul = document.querySelector("ul"); 
+ul.innerHTML = lists  //Y para remover ul.innerHTML = "" o remove
+console.log(ul.innerHTML)
+console.log(typeof ul.innerHTML)
+
+/*
+Agregando Estilos css al html
+*/
+const li = document.querySelectorAll("li")
+li.forEach((li, i) => {
+  li.style.fontSize = "24px"; // todos los títulos tendrán un tamaño de letra de 24px
+  if (i % 2 === 0) {
+    li.style.color = "green";
+  } else {
+    li.style.color = "red";
+  }
+});
+console.log(li)
+console.log(typeof li)
+
+/*
+Creando etiquetas HTML
+document.createElement("tagname");
+*/
+
+let parrafo = document.createElement("p")
+parrafo.className = "title"
+parrafo.style.fontSize = "24px"
+parrafo.style.color = "blue"
+parrafo.textContent = "Este es un parrafo creado desde js"
+
+console.log(parrafo)
+
+/*
+Creacion de multiples elementos
+Se implementa todo con un ciclo for
+for (let i = 0; i < 3; i++) {
+        title = document.createElement("h1");
+        title.className = "title";
+        title.style.fontSize = "24px";
+        title.textContent = i;
+        console.log(title);
+      }
+*/
+
+/*
+Para poder visualizar el elemento creado en la pagina o documento html
+es necesario agregarlo como un elemento hijo, por lo que para hacerlo es
+necesario la funcion appendChild y donde recibe el elemento creado
+*/
+
+let valor = document.body.appendChild(parrafo) //Aqui devuelve el objeto creado
+console.log(valor)
+
+/*
+Si se quiere eliminar un elemento, se puede usar el removeChild
+*/
+
+setTimeout( () => {
+  const p = document.querySelector('p')
+  let resp = document.body.removeChild(p)
+  console.log(resp) //Aqui devuelve el objeto a borrar
+  console.log(typeof resp)
+}, 4000) //Se elimina la etiqueta en 4 sec
+
+//Tambien se puede eliminar usando el innerHTML = ""
