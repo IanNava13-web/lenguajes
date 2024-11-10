@@ -102,7 +102,11 @@ El fetch devuelve una promesa que resuelve a un objeto llamado response, como re
 
 const url = "https://restcountries.com/v2/all"; // api de países
 fetch(url) // Aqui hace la peticion, no es necesaria la opcion
-  .then((response) => response.json()) // acceder a los datos de la API o se espera que sea un JSON para hacerlos un OBJETO JS. Aqui devuelve la promesa
+  .then((response) => {
+    console.log(response)
+    // console.log(response.json())
+    return response.json() //Acceder a los datos de la API o esperar que el body sea un JSON para hacerlos un OBJETO JS. Aqui devuelve la promesa
+  })
   .then((data) => console.log(data)) // despues de obtenidos de la conversion a JSON se muestran en consola
   .catch((error) => console.error(error)) // manejo de errores si ocurre algo incorrecto
   .finally(() => console.log("Se ha completado el fetch"))
