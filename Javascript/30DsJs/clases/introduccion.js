@@ -170,7 +170,7 @@ importante el modo estricto*/
 
 /*
 Metodos estaticos: Son funciones que se llaman dentro de la misma clase y no por una instancia
-Person.staticFunction() por ejemple Date.now
+Person.staticFunction() por ejemplo Date.now
 */
 
 /*
