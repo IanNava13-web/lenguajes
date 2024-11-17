@@ -26,7 +26,7 @@ Puedes añadir tantas líneas y párrafos como quieras.
 
 ~~~
 
-![Programación](/img/solar _system.WEBP "Sistema solar")
+![Programación](/img/solar_system.jpg "Sistema solar")
 
 > Has lo que puedas con lo que tienes y no te preocupes por el resto
 
