@@ -6,19 +6,19 @@
 
 ---
 
-Este es un bloque para hacer ejercicios de programación...
+:+1: Este es un bloque de ejercicios de algunos lenguajes de programación...
 
 En este caso aprendo a hacer ejercicios en estos lenguajes:
 
-* _JavaScript_
++ _JavaScript_
 
-* _Python_
++ _Python_
 
-* _TypeScript_
++ _TypeScript_
 
-* ...
++ ...
 
-####Código js
+#### Código js
 
 ```js
 let parrafo = 
