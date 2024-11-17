@@ -18,8 +18,8 @@ En este caso aprendo a hacer ejercicios en estos lenguajes:
 
 * ...
 
-~~~
-`
+
+```
 let parrafo = 
 		" Los meses del año \
 		 Enero tiene 31 dias \
@@ -47,8 +47,7 @@ diasInt.forEach( j => {
 	suma += j
 })
 console.log("un año tiene: ",suma," dias") 
-`
-~~~
+```
 
 ![Programación](/img/solar_system.jpg "Sistema solar")
 
