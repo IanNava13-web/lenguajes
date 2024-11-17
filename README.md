@@ -18,8 +18,9 @@ En este caso aprendo a hacer ejercicios en estos lenguajes:
 
 * ...
 
+####Código js
 
-```
+```js
 let parrafo = 
 		" Los meses del año \
 		 Enero tiene 31 dias \
