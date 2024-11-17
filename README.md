@@ -1,20 +1,20 @@
 # Lenguajes
 
-=
+***
 
 #### Bloque con ejercicios
 
--
+---
 
 Este es un bloque para hacer ejercicios de programación...
 
 En este caso aprendo a hacer ejercicios en estos lenguajes:
 
-* JavaScript
+* _JavaScript_
 
-* Python
+* _Python_
 
-* TypeScript
+* _TypeScript_
 
 * ...
 
@@ -26,6 +26,7 @@ Puedes añadir tantas líneas y párrafos como quieras.
 
 ~~~
 
+![Programación](/img/solar _system.WEBP "Sistema solar")
 
 > Has lo que puedas con lo que tienes y no te preocupes por el resto
 
