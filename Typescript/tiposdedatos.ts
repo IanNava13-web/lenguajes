@@ -79,3 +79,69 @@ console.log(arreglo2)
 
 let arreglo3 = [1,"a",2,"b"] //Esto es una forma any
 console.log(arreglo3)
+
+/*
+Tuplas
+Son arreglos que definen tiene predefinido cada tipo de dato
+*/
+let tupla1 : [number, string, boolean, any, null]
+tupla1 = [1234, "abcde", false, 156, null]
+console.log(tupla1)
+
+//Tuplas readonly, no se puede agregar datos
+let tupla2 : readonly [number,string,boolean] = [9876,"cadena",true]
+console.log(tupla2)
+
+//Nombre de tuplas: Dan un contexto de los valores en cada index del arreglo
+const tupla3 : [x:number,y:number] = [100,101]
+console.log(tupla3)
+
+//Desestructurando tuplas
+let punto : [number,string,boolean] = [12,"cafe",true]
+let [a,b,c] = punto
+console.log(a,b,c)
+
+/*
+OBJETOS
+Para declarar objetos es necesario declarar cada valor con su respectivo tipo de dato
+aunque tambien existe la inferencia
+*/
+
+const carro : {
+	tipo: string,
+	valor: number,
+	modelo: string
+} = {
+	tipo: "Toyota",
+	valor: 10000000,
+	modelo: "corolla"
+}
+
+console.log(carro)
+console.log(carro.tipo)
+// console.log(carro[modelo])
+console.log(carro.modelo)
+console.log(typeof carro.valor)
+
+//Objetos con atributos opcionales (?)
+
+const carro2: { tipo: string, modelo:string, valor?:number } = {
+	tipo: "Toyota",
+	modelo: "corolla"
+}
+
+console.log(carro2)
+
+//Firma en los index, lo que significa que cada clave tiene asignada un tipo de dato
+
+const casa1 : { [index: string]: number } = {}
+casa1.cantidad = 12
+casa1.precio = 12000000
+//casa1.direccion = "cr123" Da error por el tipo de dato
+console.log(casa1)
+
+const casa2 : { [index: number]: number } = {}
+casa2[1] = 12
+casa2[2] = 12000000
+//casa2.3 = "cr123" Da error por el tipo de dato
+console.log(casa2)
