@@ -145,3 +145,100 @@ casa2[1] = 12
 casa2[2] = 12000000
 //casa2.3 = "cr123" Da error por el tipo de dato
 console.log(casa2)
+
+
+/*
+Enums
+Es una "Clase" que representa un conjunto de constante
+*/
+
+//enums sin inicializar: Se asume que primer dato es cero, y comienza el conteo
+enum cardinales {
+	norte,
+	sur,
+	este,
+	oeste
+}
+
+console.log(cardinales)
+console.log(cardinales.norte)
+console.log(cardinales.este)
+
+//enums inicializadas
+enum puntos {
+	arriba = 2,
+	abajo,
+	izquierda,
+	derecha
+}
+
+console.log(puntos.abajo) //3
+console.log(puntos.derecha) //5
+
+//enums completamente inicializadas
+enum StatusCodes {
+  NotFound = 404,
+  Success = 200,
+  Accepted = 202,
+  BadRequest = 400
+}
+console.log(StatusCodes);
+console.log(StatusCodes.NotFound);
+console.log(StatusCodes.Success);
+
+//Cadenas de enums
+enum cadenas {
+	valor1 = "valor1",
+	valor2 = "valor2",
+	valor3 = "valor3",
+	valor4 = "valor4",
+}
+console.log(cadenas)
+console.log(cadenas.valor1)
+console.log(cadenas.valor3)
+
+/*
+Compartir datos - Alias e Interfaces
+*/
+
+/*
+Alias
+Permite definir tipos con nombre especifico (type)
+*/
+type anio = number
+type mes = number
+type bool = boolean
+type nombre = string
+
+type Casa = {
+	anio: anio,
+	mes: mes,
+	dueno: nombre
+}
+
+const anio1: anio = 2024
+const boole: bool = true
+const nombre3: nombre = "Pacho"
+const casa3: Casa = {
+	anio: anio1,
+	mes: 9,
+	dueno: nombre3
+}
+console.log(anio1)
+console.log(boole)
+console.log(casa3)
+
+/*
+INTERFACES
+Similares a los type pero solo aplica a las clases
+*/
+
+interface Rectangle {
+  height: number,
+  width: number
+}
+
+const rectangle: Rectangle = {
+  height: 20,
+  width: 10
+};
