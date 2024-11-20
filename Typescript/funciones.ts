@@ -55,7 +55,7 @@ mensaje(5,"GOW")
 function metodo4( {param1,param2}:{param1:number,param2:boolean}){
 	console.log(param1,", ",param2)
 }
-metodo4( {param1:987, param2:false} ) //Enviar un objeto
+metodo4( {param1:987, param2:false} ) //Enviar un objeto practicamente
 
 //Parametros de descanso: Estos parametros son matrices
 function suma(...valor: number[]){ //Se desestructura y se establece el parametro en un arreglo de numeros
