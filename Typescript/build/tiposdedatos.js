@@ -111,3 +111,73 @@ casa2[1] = 12;
 casa2[2] = 12000000;
 //casa2.3 = "cr123" Da error por el tipo de dato
 console.log(casa2);
+/*
+Enums
+Es una "Clase" que representa un conjunto de constante
+*/
+//enums sin inicializar: Se asume que primer dato es cero, y comienza el conteo
+var cardinales;
+(function (cardinales) {
+    cardinales[cardinales["norte"] = 0] = "norte";
+    cardinales[cardinales["sur"] = 1] = "sur";
+    cardinales[cardinales["este"] = 2] = "este";
+    cardinales[cardinales["oeste"] = 3] = "oeste";
+})(cardinales || (cardinales = {}));
+console.log(cardinales);
+console.log(cardinales.norte);
+console.log(cardinales.este);
+//enums inicializadas
+var puntos;
+(function (puntos) {
+    puntos[puntos["arriba"] = 2] = "arriba";
+    puntos[puntos["abajo"] = 3] = "abajo";
+    puntos[puntos["izquierda"] = 4] = "izquierda";
+    puntos[puntos["derecha"] = 5] = "derecha";
+})(puntos || (puntos = {}));
+console.log(puntos.abajo); //3
+console.log(puntos.derecha); //5
+//enums completamente inicializadas
+var StatusCodes;
+(function (StatusCodes) {
+    StatusCodes[StatusCodes["NotFound"] = 404] = "NotFound";
+    StatusCodes[StatusCodes["Success"] = 200] = "Success";
+    StatusCodes[StatusCodes["Accepted"] = 202] = "Accepted";
+    StatusCodes[StatusCodes["BadRequest"] = 400] = "BadRequest";
+})(StatusCodes || (StatusCodes = {}));
+console.log(StatusCodes);
+console.log(StatusCodes.NotFound);
+console.log(StatusCodes.Success);
+//Cadenas de enums
+var cadenas;
+(function (cadenas) {
+    cadenas["valor1"] = "valor1";
+    cadenas["valor2"] = "valor2";
+    cadenas["valor3"] = "valor3";
+    cadenas["valor4"] = "valor4";
+})(cadenas || (cadenas = {}));
+console.log(cadenas);
+console.log(cadenas.valor1);
+console.log(cadenas.valor3);
+const anio1 = 2024;
+const boole = true;
+const nombre3 = "Pacho";
+const casa3 = {
+    anio: anio1,
+    mes: 9,
+    dueno: nombre3
+};
+console.log(anio1);
+console.log(boole);
+console.log(casa3);
+const rectangle = {
+    height: 20,
+    width: 10
+};
+console.log(rectangle);
+console.log(rectangle.height);
+const coloredRectangle = {
+    height: 20,
+    width: 10,
+    color: "red"
+};
+console.log(coloredRectangle);
