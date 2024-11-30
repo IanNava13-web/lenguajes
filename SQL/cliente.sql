@@ -1,4 +1,4 @@
-show databases;
+-- show databases;
 use Salvadora;
 create table Cliente(
 	CI INT (10) NOT NULL,
@@ -8,4 +8,10 @@ create table Cliente(
     PRIMARY KEY (CI)
 );
 
-show tables
+show tables;
+
+-- show para ver databases y tables
+-- describe para ver table
+-- delete borra todos los registros de la tabla
+
+describe producto;
