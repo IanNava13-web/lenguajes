@@ -3,6 +3,7 @@
 class Rectangulo {
     public base:number;
     public altura:number;
+    public area: number;
 
     constructor(base:number,altura:number) {
         this.base   = base;
